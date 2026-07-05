@@ -27,3 +27,8 @@ body {
   /* color: var(--foreground); */
   font-family: Poppins;
 }
+
+h1{
+  font-size: xx-large;
+  font-weight: 900;
+}

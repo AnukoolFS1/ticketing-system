@@ -39,3 +39,8 @@ for (let x = 1; x < value.length; x++){
 
 
 console.log(newString)
+
+
+
+//  DL126256260316173330
+//  DL1SAJ9844
