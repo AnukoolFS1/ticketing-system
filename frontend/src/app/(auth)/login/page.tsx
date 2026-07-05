@@ -1,11 +1,13 @@
 import Button from "@/utility/bcomponents/Button";
 import Input from "@/utility/bcomponents/Input";
-import { SetStateAction, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { loginObjectType } from "./pageTypes";
 
 export default function Login() {
     const [loginObject, setLoginObject] = useState<loginObjectType>({ username: "", password: "" })
 
+    const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
+    }
     return (
         <section>
             <h1>Login</h1>
@@ -20,7 +22,7 @@ export default function Login() {
 
                     }}
                 />
-                <Button text="Login" onClick={() => { }} />
+                <Button text="Login" onClick={onClickHandler} />
             </div>
         </section>
     )

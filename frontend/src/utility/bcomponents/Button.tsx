@@ -1,7 +1,9 @@
+import { CSSProperties, MouseEventHandler } from "react";
+
 type PropType = {
     text: string;
-    onClick: () => void
-    styleObject?: React.CSSProperties;
+    onClick: MouseEventHandler<HTMLButtonElement>;
+    styleObject?: CSSProperties;
     styleString?: string
 }
 
@@ -9,7 +11,7 @@ type PropType = {
 function Button({ text, onClick, styleObject, styleString }: PropType) {
     return (
         <button
-            onClick={() => onClick()}
+            onClick={onClick}
             style={styleObject}
             className={styleString}
         >

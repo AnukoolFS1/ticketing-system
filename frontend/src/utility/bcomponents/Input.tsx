@@ -16,6 +16,7 @@ export default function Input({ type = "text", placeholder, onChange, styleObjec
             style={styleObject}
             className={styleString}
             onChange={onChange}
+            placeholder={placeholder}
         />
     )
 }
