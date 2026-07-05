@@ -1,12 +1,26 @@
+import Button from "@/utility/bcomponents/Button";
+import Input from "@/utility/bcomponents/Input";
+import { SetStateAction, useState } from "react";
+import { loginObjectType } from "./pageTypes";
+
 export default function Login() {
+    const [loginObject, setLoginObject] = useState<loginObjectType>({ username: "", password: "" })
 
     return (
         <section>
             <h1>Login</h1>
             <div>
-                <input type="text" />
-                <input type="text" />
+                <Input
+                    type={"text"}
+                    placeholder="Username"
+                    onChange={(e) => { // e.currentTarget.value
+                        setLoginObject((prev: loginObjectType) => {
+                            return { ...prev, password: e.currentTarget.value }
+                        })
 
+                    }}
+                />
+                <Button text="Login" onClick={() => { }} />
             </div>
         </section>
     )

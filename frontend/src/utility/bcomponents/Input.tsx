@@ -1,19 +1,21 @@
+import { ChangeEvent } from "react";
+
 type PropType = {
     type: string;
     placeholder?: string;
-    functionality: () => void;
-    styleObject: React.CSSProperties;
-    styleString: string;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    styleObject?: React.CSSProperties;
+    styleString?: string;
 }
 
-export default function Input({ type, placeholder, functionality, styleObject, styleString }: PropType) {
+export default function Input({ type = "text", placeholder, onChange, styleObject, styleString }: PropType) {
 
     return (
         <input
-            type={type || "text"}
+            type={type}
             style={styleObject}
             className={styleString}
-            onInput={functionality}
+            onChange={onChange}
         />
     )
 }

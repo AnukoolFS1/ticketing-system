@@ -1,15 +1,15 @@
 type PropType = {
     text: string;
-    functionality: () => void
-    styleObject: React.CSSProperties;
-    styleString: string
+    onClick: () => void
+    styleObject?: React.CSSProperties;
+    styleString?: string
 }
 
 
-function Button({ text, functionality, styleObject, styleString }: PropType) {
+function Button({ text, onClick, styleObject, styleString }: PropType) {
     return (
         <button
-            onClick={() => functionality()}
+            onClick={() => onClick()}
             style={styleObject}
             className={styleString}
         >
