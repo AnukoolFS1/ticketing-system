@@ -2,7 +2,7 @@ import { ChangeEventHandler } from "react";
 
 type PropType = {
     name: string
-    type: string;
+    type?: string;
     placeholder?: string;
     onChange: ChangeEventHandler<HTMLInputElement>;
     styleObject?: React.CSSProperties;

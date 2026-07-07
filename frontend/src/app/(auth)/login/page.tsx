@@ -5,7 +5,8 @@ import Input from "@/utility/bcomponents/Input";
 import { ChangeEvent, MouseEvent, useState } from "react";
 import { loginObjectType } from "./pageTypes";
 
-const inputStyle = "color-red"
+const inputStyle = "rounded-sm bg-indigo-500/60"
+
 
 export default function Login() {
     const [loginObject, setLoginObject] = useState<loginObjectType>({ username: "", password: "" })
@@ -21,26 +22,27 @@ export default function Login() {
     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
     }
 
-    console.log(loginObject)
+    const commonInputProps = {
+        onChange: inputChangeHandler,
+        type: "text",
+        styleString: inputStyle
+    }
     return (
         <section className="flex flex-col mx-80">
             <h1>Login</h1>
             <div
-                className="flex flex-col border"
+                className="flex flex-col border gap-2"
             >
                 <Input
-                    type={"text"}
-                    placeholder="Username"
-                    onChange={inputChangeHandler}
-                    styleString={inputStyle}
                     name="username"
+                    placeholder="Username"
+                    {...commonInputProps}
                 />
                 <Input
-                    type={"text"}
-                    placeholder="Username"
-                    onChange={inputChangeHandler}
-                    styleString={inputStyle}
                     name="password"
+                    placeholder="Password"
+                    {...commonInputProps}
+                    type="password"
                 />
                 <Button
                     text="Login"
