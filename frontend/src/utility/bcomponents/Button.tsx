@@ -4,7 +4,7 @@ type PropType = {
     text: string;
     onClick: MouseEventHandler<HTMLButtonElement>;
     styleObject?: CSSProperties;
-    styleString?: string
+    styleString?: string;
 }
 
 
@@ -13,7 +13,7 @@ function Button({ text, onClick, styleObject, styleString }: PropType) {
         <button
             onClick={onClick}
             style={styleObject}
-            className={styleString}
+            className={"cursor-pointer " + styleString}
         >
             {text}
         </button>

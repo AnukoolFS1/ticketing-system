@@ -28,12 +28,12 @@ export default function Login() {
         styleString: inputStyle
     }
     return (
-        <section className="flex flex-col mx-80">
-            <h1>Ticketing System</h1>
-            <div
-                className="flex flex-col border gap-2 my-40 items-center justify-center"
+        <section className="flex flex-col mx-80 my-10">
+            <h1 className="text-amber-50">Ticketing System</h1>
+            <section
+                className="flex flex-col gap-2 my-24 items-center justify-center rounded-lg bg-indigo-900 text-amber-50 h-64"
                 >
-                <h2>Login</h2>
+                <h2 className="text-2xl font-bold">Login</h2>
                 <Input
                     name="username"
                     placeholder="Username"
@@ -49,7 +49,7 @@ export default function Login() {
                     text="Login"
                     onClick={onClickHandler}
                 />
-            </div>
+            </section>
         </section>
     )
 }
