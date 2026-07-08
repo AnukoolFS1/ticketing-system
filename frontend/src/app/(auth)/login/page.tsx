@@ -29,11 +29,11 @@ export default function Login() {
     }
 
     useEffect(() => {
-        document.documentElement.classList.add("teal")
+        document.documentElement.classList.add("royal")
     },[])
     return (
         <section className="flex flex-col mx-80 my-10">
-            <h1 className="text-amber-50">Ticketing System</h1>
+            <h1 className="text-text">Ticketing System</h1>
             <section
                 className={`flex flex-col gap-2 my-24 items-center justify-center rounded-lg bg-foreground text-amber-50 h-64`}
                 >

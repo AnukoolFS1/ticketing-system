@@ -15,6 +15,20 @@
   --contrast: #FFE0C5;
 }
 
+.sands {
+  --background: #8A5F41;
+  --foreground: #A77F60;
+  --text: #F3E4C9;
+  --contrast: #F3E4C9;
+}
+
+.royal {
+  --background: #67A2C5;
+  --foreground: #9BCEC1;
+  --text: #FFEBD3;
+  --contrast: #6890ff;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
