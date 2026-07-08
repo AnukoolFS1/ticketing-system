@@ -7,13 +7,15 @@ type PropType = {
     styleString?: string;
 }
 
+const buttonCommonStyleTailwind = ""
 
 function Button({ text, onClick, styleObject, styleString }: PropType) {
     return (
         <button
             onClick={onClick}
             style={styleObject}
-            className={"cursor-pointer " + styleString}
+            className={styleString + 
+                " cursor-pointer  bg-contrast text-zinc-800 px-5 py-2 rounded-lg my-2"}
         >
             {text}
         </button>

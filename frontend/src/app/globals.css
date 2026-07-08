@@ -8,19 +8,28 @@
   --foreground: #171717;
 }
 
+.teal {
+  --background: #007979;
+  --foreground: #24B1B1;
+  --text: #FFF0E4;
+  --contrast: #FFE0C5;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-contrast: var(--contrast);
+  --color-text: var(--text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   /* background: var(--background); */
@@ -28,7 +37,7 @@ body {
   font-family: Poppins;
 }
 
-h1{
+h1 {
   font-size: xx-large;
   font-weight: 900;
 }

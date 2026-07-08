@@ -19,6 +19,7 @@ export default function Input({ type = "text", name, placeholder, onChange, styl
             className={styleString}
             onChange={onChange}
             placeholder={placeholder}
+            autoComplete="on"
         />
     )
 }
