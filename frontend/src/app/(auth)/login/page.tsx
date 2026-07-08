@@ -5,7 +5,7 @@ import Input from "@/utility/bcomponents/Input";
 import { ChangeEvent, MouseEvent, useState } from "react";
 import { loginObjectType } from "./pageTypes";
 
-const inputStyle = "rounded-sm bg-indigo-500/60"
+const inputStyle = "rounded-sm bg-indigo-500/60 inline-block h-10 px-4"
 
 
 export default function Login() {
@@ -29,10 +29,11 @@ export default function Login() {
     }
     return (
         <section className="flex flex-col mx-80">
-            <h1>Login</h1>
+            <h1>Ticketing System</h1>
             <div
-                className="flex flex-col border gap-2"
-            >
+                className="flex flex-col border gap-2 my-40 items-center justify-center"
+                >
+                <h2>Login</h2>
                 <Input
                     name="username"
                     placeholder="Username"
