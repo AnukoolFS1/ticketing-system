@@ -2,7 +2,7 @@
 
 import Button from "@/utility/bcomponents/Button";
 import Input from "@/utility/bcomponents/Input";
-import { ChangeEvent, MouseEvent, useEffect, useState } from "react";
+import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from "react";
 import { loginObjectType } from "./pageTypes";
 
 const inputStyle = "rounded-sm bg-background inline-block h-10 px-4 focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -28,12 +28,23 @@ export default function Login() {
         styleString: inputStyle
     }
 
+    const randomRef = useRef<HTMLButtonElement | null>(null)
+
+    const UpdateRandomRef = () => {
+        if (randomRef.current) {
+            randomRef.current.textContent = "1";
+        }
+    }
+
     useEffect(() => {
         document.documentElement.classList.add("royal")
-    },[])
+    }, [])
     return (
         <section className="flex flex-col mx-80 my-10">
-            <h1 className="text-text">Ticketing System</h1>
+            <button ref={randomRef} onClick={() => UpdateRandomRef()} style={{ border: "1px solid black" }}>
+                0
+            </button>
+            {/* <h1 className="text-text">Ticketing System</h1>
             <section
                 className={`flex flex-col gap-2 my-24 items-center justify-center rounded-lg bg-foreground text-amber-50 h-64`}
                 >
@@ -53,7 +64,7 @@ export default function Login() {
                     text="Login"
                     onClick={onClickHandler}
                 />
-            </section>
+            </section> */}
         </section>
     )
 }
